@@ -22,3 +22,5 @@ codegen-units = 1
 [patch.crates-io]
 curve25519-dalek = { git = "https://github.com/Riateche/curve25519-dalek.git", branch = "3.2.1-patch" }
 aes-gcm-siv = { git = "https://github.com/Riateche/AEADs.git", branch = "aes-gcm-siv-v0.10.3-patch" }
+# bypass yanked 0.8.0 crate - https://crates.io/crates/solana_rbpf/versions
+solana_rbpf = { git = "https://github.com/solana-labs/rbpf.git", tag = "v0.8.0" }

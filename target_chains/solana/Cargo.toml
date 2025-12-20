@@ -21,12 +21,16 @@ incremental = false
 codegen-units = 1
 
 [workspace.dependencies]
-wormhole-core-bridge-solana = {git = "https://github.com/wormhole-foundation/wormhole", rev = "7bd40b595e22c5512dfaa2ed8e6d7441df743a69"}
+wormhole-core-bridge-solana = {git = "https://github.com/Kamino-Finance/wormhole", rev = "8dde353d8e432edb2532b03663a6355f256304d5"}
 wormhole-vaas-serde =  "0.1.0"
 serde_wormhole = "0.1.0"
-anchor-lang = "0.28.0"
-anchor-client = "0.28.0"
-solana-program = "1.16.20"
-solana-program-test = "1.16.20"
-solana-sdk = "1.16.20"
-solana-client = "1.16.20"
+anchor-lang = "~0.29.0"
+anchor-client = "~0.29.0"
+solana-program = "1.17.34"
+solana-program-test = "1.17.34"
+solana-sdk = "1.17.34"
+solana-client = "1.17.34"
+
+[patch.crates-io]
+# bypass yanked 0.8.0 crate - https://crates.io/crates/solana_rbpf/versions
+solana_rbpf = { git = "https://github.com/solana-labs/rbpf.git", tag = "v0.8.0" }
